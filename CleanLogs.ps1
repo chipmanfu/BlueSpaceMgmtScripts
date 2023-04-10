@@ -5,12 +5,10 @@
         - https://gallery.technet.microsoft.com/office/Clear-Exchange-2013-Log-71abba44#content
         - https://ephams.com/2018/09/powershell-how-to-delete-exchange-transation-logs/
 
-    TO BE EXECUTED ON: Windows Server running Exchange 2016 or 2013
+    TO BE EXECUTED ON: Windows Server running Exchange 2019, 2016 or 2013
 
    NOTE: If you get "Not Digitally Signed" ERROR.
    Then open the script in Powershell ISE, then make a simple edit and save it. For example delete the line below
-               ### DELETE THIS LINE and save to get rid of Not Digitally signed error ###
-
      PRE-REQs: N/A
 #>
 
@@ -21,19 +19,12 @@
 
 
 #### USER SET VARIABLES SECTION ####
-#### NOTE: This section has been prepopulated with 168 COS Cyber range variables for BRAWNDO and MI6.
-####  168th users, uncomment the range this is being ran on and comment out the other.
-####  Anyone else, pick one set and change it for your deployment.
-######------ BRAWNDO Range Settings below
-#$days=0
-#$IISLogPath="C:\inetpub\logs\LogFiles\"
-#$ExchangeLoggingPath="E:\Exchange2016\Logging\"
-#$ETLLoggingPath="E:\Exchange2016\Bin\Search\Ceres\Diagnostics\Logs\"
+######------ Default Settings below - change this based on your exchange install/log folder locations.
+$days=0
+$IISLogPath="C:\inetpub\logs\LogFiles\"
+$ExchangeLoggingPath="E:\Exchange2016\Logging\"
+$ETLLoggingPath="E:\Exchange2016\Bin\Search\Ceres\Diagnostics\Logs\"
 ######------ MI6 Range Settings below
-#$days=0
-#$IISLogPath="C:\inetpub\logs\LogFiles\"
-#$ExchangeLoggingPath="C:\Program Files\Microsoft\Exchange Server\V15\Logging\"
-#$ETLLoggingPath="c:\Program Files\Microsoft\Exchange Server\V15\Bin\Search\Ceres\Diagnostics\Logs\"
 #### END USER VARIABLE EDIT SECTION ####
 
 ### CleanLogfiles function START
