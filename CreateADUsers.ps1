@@ -1,4 +1,5 @@
-﻿# Create destination AD Structures
+﻿# This script is for adding users to an Active directory.  Modify however you wish.  The current values are based off a domain called galfed.com.
+ # Create destination AD Structures
 New-ADOrganizationalUnit -name "GF-Accounts" -path "DC=galfed,DC=com" 
 New-ADOrganizationalUnit -name "Users" -path "OU=GF-Accounts,DC=galfed,DC=com"
 New-ADOrganizationalUnit -name "Admins" -path "OU=GF-Accounts,DC=galfed,DC=com"
